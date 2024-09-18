@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VdeVoludo | página oficial</title>
+    <link rel="icon" href="icono.png" type="image/png">
+    <style>
+
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo de imagen */
+body {
+    height: 100vh;
+    background-image: url('https://pbs.twimg.com/profile_images/1819664551744278528/e_cDL2Ar_400x400.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto mantiene la imagen de fondo fija */
+    font-family: Arial, sans-serif;
+}
+
+/* Centrar */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Opcional: centra el texto dentro del contenedor */
+}
+
+/* Menú de navegación */
+.navbar {
+    background-color: #4e3d2bc8;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #4E3D2B;
+    border-radius: 5px;
+}
+
+/* Estilos para los submenús */
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4E3D2Bc8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar ul li ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li ul li a {
+    color: white;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+}
+
+/* Contenido principal */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para centrar los videos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Footer de los iconos de rrss */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para centrar los iconos y ajustar el espacio entre ellos */
+.social-icons {
+    display: flex; /* Usa flexbox para centrar y alinear los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center; /* Centra los iconos verticalmente */
+    padding: 10px; /* Ajusta el padding alrededor de los iconos */
+}
+
+.social-icons a {
+    margin: 0 20px; /* Ajusta el espacio entre los iconos */
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px; /* Ajusta el tamaño a tu preferencia */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+body, html {
+    overflow: hidden; /* Deshabilita el desplazamiento en la página */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="https://discord.gg/uqGHHRDMT9" target="blank">Únete</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+  
+    <!-- Secciones de la página -->
+    <!-- Sección de inicio -->
+    <section id="inicio" class="centered">
+      <img src="header.png" alt="header" width="900" height="400">
+
+    </section>
+  
+    <!-- Sección de Vídeos -->
+    <section id="videos" class="centered">
+      <div class="video-container">
+        <!-- Incrustar los videos de YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UWVDE1bgCSc" 
+            title="roblox con franceses" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BhtqfO9ygO0" 
+            title="ranking de banderas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    </section>
+  
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="centered">
+        <h1 style="font-size: 3em; margin-bottom: 20px;">Contacto</h1>
+        <p style="font-size: 1.5em;">email: vdevoludo@gmail.com</p>
+    </section>
+    <div class="spacer"></div>
+    <!-- Iconos de redes sociales -->
+    <footer>
+      <div class="social-icons">
+          <a href="https://twitter.com/vdevigo" target="_blank"><img src="iconos/twitter.png" alt="Twitter" width="40" height="40"></a>
+          <a href="https://instagram.com/rocioriaal" target="_blank"><img src="iconos/instagram.png" alt="Instagram" width="40" height="40"></a>
+          <a href="https://youtube.com/@vdevoludo" target="_blank"><img src="iconos/youtube.png" alt="YouTube" width="40" height="40"></a>
+          <a href="https://www.twitch.tv/pufffffffffffffff" target="_blank"><img src="iconos/twitch.png" alt="Twitch" width="40" height="40"></a>
+      </div>
+    </footer>
+
+    <!-- Ocultar resto de menú con JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('a[data-target]');
+
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('data-target');
+                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
