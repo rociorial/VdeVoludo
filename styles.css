@@ -1,1 +1,141 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Fondo de imagen */
+body {
+    height: 100vh;
+    background-image: url('https://pbs.twimg.com/profile_images/1819664551744278528/e_cDL2Ar_400x400.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto mantiene la imagen de fondo fija */
+    font-family: Arial, sans-serif;
+}
+
+/* Centrar */
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Opcional: centra el texto dentro del contenedor */
+}
+
+/* Menú de navegación */
+.navbar {
+    background-color: #4e3d2bc8;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #4E3D2B;
+    border-radius: 5px;
+}
+
+/* Estilos para los submenús */
+.navbar ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4E3D2Bc8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar ul li ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.navbar ul li ul li a {
+    color: white;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+.navbar ul li:hover ul {
+    display: block;
+}
+
+/* Contenido principal */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para centrar los videos */
+.video-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Footer de los iconos de rrss */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilos para centrar los iconos y ajustar el espacio entre ellos */
+.social-icons {
+    display: flex; /* Usa flexbox para centrar y alinear los iconos */
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center; /* Centra los iconos verticalmente */
+    padding: 10px; /* Ajusta el padding alrededor de los iconos */
+}
+
+.social-icons a {
+    margin: 0 20px; /* Ajusta el espacio entre los iconos */
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px; /* Ajusta el tamaño a tu preferencia */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
+}
+
+body, html {
+    overflow: hidden; /* Deshabilita el desplazamiento en la página */
+}
+
+    </style>
