@@ -45,19 +45,19 @@ body {
 
 /* Menú de navegación en dispositivos móviles */
 @media (max-width: 600px) {
-    .menu-toggle {
-        display: block; /* Muestra el ícono en pantallas pequeñas */
-    }
-
     .navbar ul {
         display: none; /* Oculta el menú en pantallas pequeñas por defecto */
         flex-direction: column;
         width: 100%;
-        background-color: #4e3d2bc8; /* Opcional: fondo para el menú desplegable */
-        padding: 10px 0; /* Opcional: espaciado adicional para el menú desplegable */
-        position: absolute;
-        top: 100%;
-        left: 0;
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        background-color: #4e3d2bc8; /* Fondo del menú desplegable */
+        padding: 0; /* Elimina el padding para que el menú ocupe toda la altura */
+        overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es más largo que la pantalla */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+        position: absolute; /* Posiciona el menú de manera absoluta */
+        top: 0; /* Alinea el menú al principio de la pantalla */
+        left: 0; /* Alinea el menú al borde izquierdo de la pantalla */
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
     }
 
     .navbar ul.show {
@@ -65,14 +65,18 @@ body {
     }
 
     .navbar ul li {
-        margin: 10px 0; /* Ajusta el espaciado entre los elementos del menú */
+        margin: 10px 0; /* Ajusta el espaciado vertical entre los elementos del menú */
+        width: 100%; /* Asegura que los elementos del menú ocupen todo el ancho disponible */
+        text-align: left; /* Alinea el texto a la izquierda */
     }
 
     .navbar ul li a {
-        font-size: 1.2em; /* Ajusta el tamaño del texto del menú para pantallas pequeñas */
-        padding: 10px; /* Ajusta el padding alrededor del texto del menú */
+        font-size: 1.5em; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        padding: 15px; /* Ajusta el padding alrededor del texto */
+        display: block; /* Hace que los enlaces ocupen todo el ancho del elemento del menú */
     }
 }
+
 
 /* Menú de navegación en pantallas grandes */
 .navbar ul {
