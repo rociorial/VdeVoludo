@@ -36,6 +36,42 @@ body {
     z-index: 1000;
 }
 
+/* Estilo del ícono de menú (hamburguesa) */
+.menu-toggle {
+    display: none; /* Oculta el ícono en pantallas grandes */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Menú de navegación en dispositivos móviles */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Muestra el ícono en pantallas pequeñas */
+    }
+
+    .navbar ul {
+        display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #4e3d2bc8; /* Opcional: fondo para el menú desplegable */
+        padding: 10px 0; /* Opcional: espaciado adicional para el menú desplegable */
+    }
+
+    .navbar ul.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Ajusta el espaciado entre los elementos del menú */
+    }
+
+    .navbar ul li a {
+        font-size: 1.2em; /* Ajusta el tamaño del texto del menú para pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding alrededor del texto del menú */
+    }
+}
+
+/* Menú de navegación en pantallas grandes */
 .navbar ul {
     list-style: none;
     text-align: center;
@@ -139,53 +175,6 @@ body, html {
     overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
 }
 
-/* Estilos para pantallas de 600px o menos */
-@media (max-width: 600px) {
-    .navbar ul li {
-        margin: 0 10px;
-    }
-    
-    .navbar ul li a {
-        font-size: 1em;
-        padding: 8px 12px;
-    }
-    
-    .video-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-    
-    .social-icons {
-        padding: 5px;
-        flex-direction: column; /* Coloca los iconos en una columna */
-        gap: 10px; /* Ajusta el espacio entre los iconos */
-    }
-    
-    .social-icons a {
-        margin: 0 10px;
-    }
-    
-    .social-icons img {
-        width: 30px; /* Ajusta el tamaño de los iconos para pantallas pequeñas */
-        height: 30px;
-    }
-    
-    body, html {
-        overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
-    }
-    
-    .menu-toggle {
-        display: block; /* Muestra el ícono en pantallas pequeñas */
-        cursor: pointer;
-    }
-    
-    .navbar ul {
-        display: none; /* Oculta el menú en pantallas pequeñas por defecto */
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .navbar ul.show {
         display: flex; /* Muestra el menú cuando se activa */
     }
 }
