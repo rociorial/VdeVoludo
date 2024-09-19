@@ -47,19 +47,17 @@ body {
 @media (max-width: 600px) {
     .menu-toggle {
         display: block; /* Muestra el ícono en pantallas pequeñas */
-
-    .navbar ul li {
-        margin: 15px 0; /* Ajusta el espaciado vertical entre los elementos del menú en pantallas pequeñas */
     }
 
     .navbar ul {
         display: none; /* Oculta el menú en pantallas pequeñas por defecto */
         flex-direction: column;
         width: 100%;
-        height: 100vh;
         background-color: #4e3d2bc8; /* Opcional: fondo para el menú desplegable */
         padding: 10px 0; /* Opcional: espaciado adicional para el menú desplegable */
-        overflow-y auto;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .navbar ul.show {
@@ -67,12 +65,12 @@ body {
     }
 
     .navbar ul li {
-        margin:  0; /* Ajusta el espaciado entre los elementos del menú */
+        margin: 10px 0; /* Ajusta el espaciado entre los elementos del menú */
     }
 
     .navbar ul li a {
-        font-size: 1.5em; /* Ajusta el tamaño del texto del menú para pantallas pequeñas */
-        padding: 15px; /* Ajusta el padding alrededor del texto del menú */
+        font-size: 1.2em; /* Ajusta el tamaño del texto del menú para pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding alrededor del texto del menú */
     }
 }
 
@@ -184,9 +182,8 @@ footer {
 /* Overflow en el body */
 body, html {
     overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
-    margin: 0;
-    padding: 0;
 }
+
 
 }
 
