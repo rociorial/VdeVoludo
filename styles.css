@@ -170,6 +170,12 @@ footer {
     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
 }
 
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px; /* Espaciado opcional */
+}
+
 /* Overflow en el body */
 body, html {
     overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
