@@ -55,6 +55,9 @@ body {
         width: 100%;
         background-color: #4e3d2bc8; /* Opcional: fondo para el menú desplegable */
         padding: 10px 0; /* Opcional: espaciado adicional para el menú desplegable */
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .navbar ul.show {
@@ -181,7 +184,5 @@ body, html {
     overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
 }
 
-        display: flex; /* Muestra el menú cuando se activa */
-    }
 }
 
