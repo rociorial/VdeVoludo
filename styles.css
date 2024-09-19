@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Esto mantiene la imagen de fondo fija */
+    background-attachment: scroll; /* Cambiado para mejor compatibilidad móvil */
     font-family: Arial, sans-serif;
 }
 
@@ -134,8 +134,59 @@ footer {
     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
 }
 
+/* Overflow en el body */
 body, html {
-    overflow: hidden; /* Deshabilita el desplazamiento en la página */
+    overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
 }
 
-    </style>
+/* Estilos para pantallas de 600px o menos */
+@media (max-width: 600px) {
+    .navbar ul li {
+        margin: 0 10px;
+    }
+    
+    .navbar ul li a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+    
+    .video-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .social-icons {
+        padding: 5px;
+        flex-direction: column; /* Coloca los iconos en una columna */
+        gap: 10px; /* Ajusta el espacio entre los iconos */
+    }
+    
+    .social-icons a {
+        margin: 0 10px;
+    }
+    
+    .social-icons img {
+        width: 30px; /* Ajusta el tamaño de los iconos para pantallas pequeñas */
+        height: 30px;
+    }
+    
+    body, html {
+        overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
+    }
+    
+    .menu-toggle {
+        display: block; /* Muestra el ícono en pantallas pequeñas */
+        cursor: pointer;
+    }
+    
+    .navbar ul {
+        display: none; /* Oculta el menú en pantallas pequeñas por defecto */
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar ul.show {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+}
+
