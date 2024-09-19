@@ -45,14 +45,19 @@ body {
 
 /* Menú de navegación en dispositivos móviles */
 @media (max-width: 600px) {
+    .menu-toggle {
+        display: block; /* Muestra el ícono en pantallas pequeñas */
+    }
+
     .navbar ul {
         display: none; /* Oculta el menú en pantallas pequeñas por defecto */
         flex-direction: column;
         width: 100%;
-        height: 100vh; /* Ocupa toda la altura de la ventana */
-        background-color: #4e3d2bc8; /* Fondo del menú desplegable */
-        padding: 0; /* Elimina el padding para que el menú ocupe toda la altura */
-        overflow-y: auto; /* Permite el desplazamiento vertical si el contenido es más largo que la pantalla */
+        background-color: #4e3d2bc8; /* Opcional: fondo para el menú desplegable */
+        padding: 10px 0; /* Opcional: espaciado adicional para el menú desplegable */
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
 
     .navbar ul.show {
@@ -60,16 +65,14 @@ body {
     }
 
     .navbar ul li {
-        margin: 0; /* Elimina el margen para ajustar mejor el espacio vertical */
+        margin: 10px 0; /* Ajusta el espaciado entre los elementos del menú */
     }
 
     .navbar ul li a {
-        font-size: 1.5em; /* Ajusta el tamaño del texto para pantallas pequeñas */
-        padding: 15px; /* Ajusta el padding alrededor del texto */
+        font-size: 1.2em; /* Ajusta el tamaño del texto del menú para pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding alrededor del texto del menú */
     }
 }
-
-
 
 /* Menú de navegación en pantallas grandes */
 .navbar ul {
@@ -179,8 +182,5 @@ footer {
 /* Overflow en el body */
 body, html {
     overflow-x: hidden; /* Deshabilita el desplazamiento horizontal en la página */
-}
-
-
 }
 
